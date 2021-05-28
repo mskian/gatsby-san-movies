@@ -59,14 +59,20 @@ const Blogindex = ({ data }) => {
         <div className="columns is-centered">
           <div className="column is-half">
             <br />
-            <h1 className="title is-5 has-text-warning has-text-centered">
-              Movies and Series...
+            <h1 className="title is-4 has-text-warning has-text-centered">
+              Movies and Series{" "}
+              <span role="img" aria-label="Growing Heart">
+                💚
+              </span>
             </h1>
+            <p className="has-text-centered">
+              I Just Keep Update the Movies and Web Series I watched.
+            </p>
             <br />
             <div>
               <ul>
                 {data.allMdx.nodes.map(({ frontmatter, fields }) => (
-                  <li key={frontmatter.title} className="title is-6">
+                  <li key={frontmatter.title} className="title is-5">
                     <Link to={fields.slug}>{frontmatter.title}</Link>
                   </li>
                 ))}
