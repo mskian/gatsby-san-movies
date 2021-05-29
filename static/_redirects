@@ -1,0 +1,5 @@
+# Netlify redirects file, edit with your domain
+# https://www.netlify.com/docs/redirects/
+
+https://sanmovies.netlify.app/* https://movies.santhoshveer.com/:splat 301!
+http://sanmovies.netlify.app/* https://movies.santhoshveer.com/:splat 301!

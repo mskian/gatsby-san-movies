@@ -30,7 +30,7 @@ const Blogindex = ({ data }) => {
           />
           <meta
             property="og:image"
-            content="https://sanmovies.netlify.app/sanmovies-cover.png"
+            content="https://movies.santhoshveer.com/sanmovies-cover.png"
           />
           <meta
             property="article:publisher"
@@ -47,7 +47,7 @@ const Blogindex = ({ data }) => {
           />
           <meta
             name="twitter:image"
-            content="https://sanmovies.netlify.app/sanmovies-cover.png"
+            content="https://movies.santhoshveer.com/sanmovies-cover.png"
           />
           <meta name="twitter:site" content="@santhoshveerece" />
           <link rel="canonical" href={pathname} />

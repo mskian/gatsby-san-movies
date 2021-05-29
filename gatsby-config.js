@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: `Movies and Web Series`,
     description: `My Currently Watching and Favourite Movies and Web Series.`,
-    siteUrl: "https://sanmovies.netlify.app",
+    siteUrl: "https://movies.santhoshveer.com",
   },
   flags: {
     DEV_SSR: false,
