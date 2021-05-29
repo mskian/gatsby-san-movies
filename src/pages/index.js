@@ -65,19 +65,27 @@ const Blogindex = ({ data }) => {
                 💚
               </span>
             </h1>
-            <p className="has-text-centered">
-              I Just Keep Update the Movies and Web Series I watched.
-            </p>
-            <br />
-            <div>
-              <ul>
-                {data.allMdx.nodes.map(({ frontmatter, fields }) => (
-                  <li key={frontmatter.title} className="title is-5">
-                    <Link to={fields.slug}>{frontmatter.title}</Link>
-                  </li>
-                ))}
-              </ul>
+            <div className="subscribe-form">
+              <p className="has-text-dark has-text-weight-medium has-text-centered">
+                Check Out My Lists{" "}
+                <span role="img" aria-label="robot">
+                  🤖
+                </span>{" "}
+                - Currently watched and Completed Movies and Web Series.{" "}
+                <span role="img" aria-label="heart">
+                  💜
+                </span>
+              </p>
+              <Link
+                to="/posts"
+                className="button-link"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
+                <span>▶ Open Blog</span>
+              </Link>
             </div>
+            <br />
           </div>
         </div>
       </div>

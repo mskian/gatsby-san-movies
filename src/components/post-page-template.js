@@ -24,7 +24,7 @@ const BlogPost = ({ data }) => {
   return (
     <section className="section">
       <HelmetProvider>
-        <Helmet>
+        <Helmet defer={false}>
           <title>{`${frontmatter.title}`}</title>
           <meta name="description" content={`${frontmatter.description}`} />
           <meta property="og:title" content={`${frontmatter.title}`} />
@@ -68,7 +68,7 @@ const BlogPost = ({ data }) => {
             <br />
             <MDXRenderer>{body}</MDXRenderer>
             <br />
-            <Link to="/">Back to Home</Link>
+            <Link to="/posts">Back to Home</Link>
             <br />
           </div>
         </div>
