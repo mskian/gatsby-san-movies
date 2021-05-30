@@ -38,6 +38,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
+  const postcategories = await graphql(`
+    query {
+      rawcategories: allMdx {
+        group(field: frontmatter___categories) {
+          fieldValue
+        }
+      }
+    }
+  `)
+
   // Create blog post pages.
   const posts = result.data.allMdx.edges
 
@@ -62,4 +72,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+
+  const data_categories = postcategories.data.rawcategories.group
+  data_categories.forEach(({ fieldValue }) =>
+    createPage({
+      path: `category/${fieldValue}`.toLowerCase(),
+      component: path.resolve("./src/components/category-layout.js"),
+      context: {
+        category: fieldValue,
+      },
+    })
+  )
 }

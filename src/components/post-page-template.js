@@ -69,7 +69,12 @@ const BlogPost = ({ data }) => {
             <br />
             <MDXRenderer>{body}</MDXRenderer>
             <br />
-            <p className="post-tags">Category : {frontmatter.categories} </p>
+            <p className="post-tags">
+              Category :{" "}
+              <Link to={`/category/${frontmatter.categories}`.toLowerCase()}>
+                {frontmatter.categories}
+              </Link>
+            </p>
             <br />
             <Link to="/posts">Back to Blog</Link>
             <br />
