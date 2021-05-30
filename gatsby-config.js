@@ -103,6 +103,7 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
+                  category: edge.node.frontmatter.categories,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                 })
@@ -122,6 +123,7 @@ module.exports = {
                         title
                         description
                         date
+                        categories
                       }
                     }
                   }

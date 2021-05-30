@@ -13,6 +13,7 @@ export const query = graphql`
         title
         description
         date(formatString: "YYYY MMMM Do")
+        categories
       }
     }
   }
@@ -64,11 +65,13 @@ const BlogPost = ({ data }) => {
             <br />
             <h1>{frontmatter.title}</h1>
             <hr />
-            <p>Updated at: {frontmatter.date}</p>
+            <p className="post-date">Updated at: {frontmatter.date}</p>
             <br />
             <MDXRenderer>{body}</MDXRenderer>
             <br />
-            <Link to="/posts">Back to Home</Link>
+            <p className="post-tags">Category : {frontmatter.categories} </p>
+            <br />
+            <Link to="/posts">Back to Blog</Link>
             <br />
           </div>
         </div>
