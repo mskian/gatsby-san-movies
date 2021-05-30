@@ -1,4 +1,5 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const slugify = require(`slugify`)
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
@@ -76,7 +77,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const data_categories = postcategories.data.rawcategories.group
   data_categories.forEach(({ fieldValue }) =>
     createPage({
-      path: `category/${fieldValue}`.toLowerCase(),
+      path: `category/${slugify(fieldValue, {
+        replacement: "-",
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+        strict: false,
+      })}`,
       component: path.resolve("./src/components/category-layout.js"),
       context: {
         category: fieldValue,

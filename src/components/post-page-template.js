@@ -71,7 +71,12 @@ const BlogPost = ({ data }) => {
             <br />
             <p className="post-tags">
               Category :{" "}
-              <Link to={`/category/${frontmatter.categories}`.toLowerCase()}>
+              <Link
+                to={`/category/${frontmatter.categories}`
+                  .toLowerCase()
+                  .split(" ")
+                  .join("-")}
+              >
                 {frontmatter.categories}
               </Link>
             </p>
