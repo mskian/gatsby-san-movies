@@ -13,7 +13,7 @@ if (!title && !postdata) {
 const basename = slugify(title, {
   replacement: "-",
   remove: /[*+~.()'"!:@]/g,
-  lower: false,
+  lower: true,
   strict: false,
 })
 
