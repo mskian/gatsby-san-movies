@@ -1,6 +1,4 @@
 import React, { Component } from "react"
-import "bulma/css/bulma.min.css"
-import "../styles/app.css"
 
 class ErroPage extends Component {
   render() {

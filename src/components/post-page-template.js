@@ -2,8 +2,6 @@ import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 import { Helmet, HelmetProvider } from "react-helmet-async"
-import "bulma/css/bulma.min.css"
-import "../styles/app.css"
 
 export const query = graphql`
   query PostsByID($id: String!) {

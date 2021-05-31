@@ -1,8 +1,6 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
 import { Helmet, HelmetProvider } from "react-helmet-async"
-import "bulma/css/bulma.min.css"
-import "../styles/app.css"
 
 export default class BlogList extends React.Component {
   render() {
