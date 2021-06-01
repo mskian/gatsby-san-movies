@@ -70,7 +70,7 @@ export default class BlogList extends React.Component {
               <br />
               <ul>
                 {posts.map(({ node }) => (
-                  <li key={node.frontmatter.title} className="title is-5">
+                  <li key={node.id} className="title is-5">
                     <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
                   </li>
                 ))}
@@ -116,6 +116,7 @@ export const blogListQuery = graphql`
     ) {
       edges {
         node {
+          id
           fields {
             slug
           }
